@@ -1,0 +1,18 @@
+{
+  "name": "bubble-sort-visualized",
+  "description": "Use Scalable Vector Graphics (SVG) to provide an interactive visual representation of the Bubble Sort algorithm.",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Ramo Mujagic <mujagic.ramo@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "vite": "^4.3.2"
+  }
+}

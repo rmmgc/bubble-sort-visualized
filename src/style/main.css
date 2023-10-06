@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --text-body-color: rgb(159, 115, 171);
+  --outline-color: rgb(159, 115, 171);
+  --page-background-color: rgb(55, 27, 88);
+  --element-background-color: rgb(76, 53, 117);
+  --sm-gap: 0.5rem;
+  --md-gap: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgb(38 18 61);
+  width: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  background-color: var(--page-background-color);
+  color: var(--text-body-color)
+}
+
+.wannabedev-header {
+  width: 80%;
+  margin-bottom: var(--md-gap);
+}
+.wannabedev-header a {
+  padding-right: 1rem;
+  color: var(--outline-color);
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.panel {
+  display: flex;
+  margin: var(--md-gap) 0;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  margin: var(--sm-gap) 0;
+}
+
+input {
+  background: var(--element-background-color);
+  border: none;
+  color: var(--text-body-color);
+  width: auto;
+  padding: 8px 20px;
+  border-radius: 0.4rem;
+  min-width: 6rem;
+  font-family: inherit;
+  font-size: inherit;
+}
+input:focus-visible {
+  outline-style: solid;
+  outline-color: var(--outline-color);
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.button-group {
+  display: flex;
+  gap: calc(var(--sm-gap) * 2);
+  margin: var(--sm-gap) 0;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 0.4rem;
+  background: var(--element-background-color);
+  color: var(--text-body-color);
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid var(--element-background-color);
+  display: flex;
+  gap: var(--sm-gap);
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+button:hover {
+  border: 1px solid var(--outline-color);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  border: 1px solid var(--element-background-color) !important;
+}
+
+#player-controls {
+  width: 80%;
+}
+
+#player-wrapper {
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  min-width: 20rem;
+  border-radius: 0.6rem;
+  background-color: rgba(76, 53, 117, 0.3);
+  overflow-x: scroll;
+  padding: 20px;
+}
+#player-wrapper.scroll-x {
+  overflow-x: scroll;
+  align-items: flex-start;
+}
+#player-wrapper .bar {
+  transition: transform 250ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+#player-wrapper .bar rect {
+  fill: #3F3B6C;
+  stroke: #3F3B6C;
+  stroke-width: 1;
+}
+#player-wrapper .bar text {
+  font-size: 0.8rem;
+  fill: var(--text-body-color);
+  text-anchor: middle;
+}
+#player-wrapper .current rect {
+  fill: #7858A6;
+  stroke: #9d71ea;
+}
+#player-wrapper .swapped rect {
+  fill: #5B4B8A;
+  stroke: #5B4B8A;
+}

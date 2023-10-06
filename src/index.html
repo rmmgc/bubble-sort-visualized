@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>wannabedev.io - Visualize Bubble Sort algorithm using SVG</title>
+		<meta name="description" content="Default description" />
+		<meta name="keywords" content="sorting, bubble sort, visualization, animation, SVG, javascript, wannabedev, developer, javascript" />
+		<meta name="author" content="Ramo Mujagic <mujagic.ramo@gmail.com>" />
+		<link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body>
+    <header class="wannabedev-header">
+      <div class="wannabedev-links">
+        <a href="https://wannabedev.io"><span>Home</span></a>
+        <a href="https://wannabedev.io/tutorials/visualize-bubble-sort-algorithm-using-svg"><span>Back to Article</span></a>
+      </div>
+    </header>
+
+    <section id="player-controls" class="panel">
+      <div class="input-wrapper">
+        <label for="list-length">Number of items</label>
+        <input type="number" id="list-length" min="1" max="20" value="10">
+      </div>
+
+      <div class="input-wrapper">
+        <label for="animation-speed">Animation speed</label>
+        <input type="number" id="animation-speed" min="100" max="5000" value="300">
+        <span>ms</span>
+      </div>
+
+      <div class="button-group">
+        <button id="play-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" fill="currentColor"></path>
+          </svg>
+          <span>Play</span>
+        </button>
+
+        <button id="pause-button" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor"></path>
+            <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor"></path>
+          </svg>
+          <span>Pause</span>
+        </button>
+
+        <button id="stop-button" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-stop-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M17 4h-10a3 3 0 0 0 -3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3 -3v-10a3 3 0 0 0 -3 -3z" stroke-width="0" fill="currentColor"></path>
+          </svg>
+          <span>Stop</span>
+        </button>
+      </div>
+    </section>
+    <section id="player-wrapper" class="panel"></section>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
